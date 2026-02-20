@@ -30,3 +30,8 @@ conda create -n flask_api python=3.11
 conda activate flask_api
 pip install -r requirements.txt
 ```
+
+# POST
+```bash
+curl -X POST http://localhost:8080/echo -H "Content-Type: application/json" -d "{\"mensagem\":\"teste POST\"}"
+```
