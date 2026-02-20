@@ -11,7 +11,7 @@ E o que foi abstraído?
 - Abertura, escrita, leitura e fechamento de recursos do sistema (Descritores de Arquivo)
 - Abertura e fechamento de sockets
 - Associação de host com porta de escuta em um socket
-- Controle do TCP Three Way Handshacke (SYN -> SYN/ACK -> ACK)
+- Controle do TCP Three Way Handshake (SYN -> SYN/ACK -> ACK)
 - Descrição do Cabeçalho
 - Envio de dados e informações
 - Abertura e fechamento ou persistência(Keep-alive) da conexão
@@ -22,9 +22,9 @@ Em resumo, foi abstraído o funcionamento normal de um servidor. Então quando u
 
 O interessante é que quando isso é entendido, percebe-se o quanto é CUSTOSO em termos de cpu, memória e rede tanto para o servidor e para quem consome pela quantidade de recurso que precisa ser aberto, manipulado e fechado em cada conexão. Pois quando se fala em recurso aberto trata-se de uma tabela com índices onde o Sistema Operacional organiza e consulta a todo momento o que está sendo executado. Praticamente um pôe casaco, tira casaco incessantemente. E se houver muitos recursos abertos, e não por acaso existe o erro "Too many open files". 
 
-Daí surgem as melhorias como o keep-alive e multiplexação já existentes por padrão nos navegadores mais novos. Onde um mantem a conexão ativa sem ser preciso fazer novamente o 3Wayhandshacke e dividir a requisição em várias outras requisições, respectivamente. 
+Daí surgem as melhorias como o keep-alive e multiplexação já existentes por padrão nos navegadores mais novos. Onde um mantem a conexão ativa sem ser preciso fazer novamente o `3 Way handshake` e dividir a requisição em várias outras requisições, respectivamente. 
 
-## Ambiente Virtual com Conda
+## Ambiente Virtual com Anaconda
 ```bash
 conda create -n flask_api python=3.11
 conda activate flask_api
