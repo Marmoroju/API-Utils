@@ -35,3 +35,20 @@ pip install -r requirements.txt
 ```bash
 curl -X POST http://localhost:8080/echo -H "Content-Type: application/json" -d "{\"mensagem\":\"teste POST\"}"
 ```
+
+## Estrutura e Boas Práticas
+- 1. Organizar o projeto em pastas:
+    - Em vez de deixar tudo em um único arquivo, cria-se uma estrutura organizada
+- 2. Usar `Blueprint` para modularizar rotas:
+    - O Blueprint é como um "mini-app" dentro do Flask. Ele permite separar rotas em módulos e depois registar tudo no app principal
+- 3. Configurar variáveis externas em `config.py`
+    - Em vez de deixar valores fixos no código, colocamos em um arquivo de configuração.
+- 4. Definir as rotas antes de começar a escrever a API
+
+## Manipulação de Dados
+- 1. Usar `request.args`para parâmetros de URL
+    - `request.args` captura query strings (parâmetros de URL)
+    - Exemplo: `GET/usuarios?id=1`
+- 2. Usar `request.json` para capturar dados enviados em POST
+    - `request.json` captura dados enviados no corpo da requisição em formato JSON
+    
